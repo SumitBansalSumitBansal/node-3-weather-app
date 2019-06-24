@@ -14,9 +14,7 @@ form.addEventListener("submit", e => {
   resultPara.textContent = "Loading...";
   errorPara.textContent = "";
 
-  fetch(
-    "http://localhost:3000/weather?address=" + userEnteredLocation.value
-  ).then(response => {
+  fetch("/weather?address=" + userEnteredLocation.value).then(response => {
     console.log(response);
 
     response.json().then(data => {
