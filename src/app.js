@@ -12,6 +12,7 @@ const publicDirPath = path.join(__dirname, "../public");
 app.use(express.static(publicDirPath));
 
 app.set("view engine", "hbs");
+app.set("views", "src/views");
 
 app.get("", (req, res) => {
   res.render("index", {
